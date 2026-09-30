@@ -1,4 +1,4 @@
-# UdyamAI — MSME Decision Intelligence
+# MSME Decision Intelligence
 
 ## BAICONF Datathon 2026 — Stage 1
 
