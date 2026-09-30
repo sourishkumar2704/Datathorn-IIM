@@ -2,7 +2,7 @@
 
 ## BAICONF Datathon 2026 — Stage 1
 
-UdyamAI is a proposed AI-based decision-intelligence framework for Indian micro and small businesses.
+This is a proposed AI-based decision-intelligence framework for Indian micro and small businesses.
 
 The research investigates whether adding timely, relevant external context to a business's own historical data can provide measurable incremental improvement in short-term sales forecasting.
 
