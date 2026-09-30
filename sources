@@ -1,0 +1,461 @@
+# UdyamAI Data & Source Registry
+
+This document contains the complete source registry referenced in the Stage 1 proposal.
+
+Sources are classified according to their role in the research.
+
+---
+
+## Source Role Legend
+
+| Role | Meaning |
+|---|---|
+| GROUND TRUTH | Direct business-level evidence |
+| CORE INPUT | Primary model input |
+| CONTEXT | Indian economic/business context |
+| EXPERIMENTAL | Candidate external signal |
+| BENCHMARK | Methodology testing only |
+| GOVERNANCE | Data/privacy/security framework |
+
+---
+
+# S01 — PIB MSME Economic Context
+
+**Role:** CONTEXT
+
+**Source:** Press Information Bureau — Ministry of MSME
+
+**Purpose:**
+Provides high-level economic context concerning the importance of MSMEs to India's economy.
+
+**Can tell us:**
+- MSME contribution to economic activity
+- employment context
+- registered enterprise context
+
+**Cannot tell us:**
+- individual business sales
+- individual business cash flow
+- individual business forecasts
+
+**Official source:**
+
+https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=157367&lang=2&reg=3
+
+---
+
+# S02 — Ministry of MSME Classification
+
+**Role:** CONTEXT
+
+**Purpose:**
+Defines the current MSME classification framework.
+
+**Can tell us:**
+- Micro/Small/Medium classification thresholds
+
+**Cannot tell us:**
+- individual business performance
+
+**Official source:**
+
+https://www.msme.gov.in/ministry/about-us/details/Title%3DWhat%27s-MSME-IzMzITMtQWa
+
+---
+
+# S03 — OEA WPI/PPI Data
+
+**Role:** EXPERIMENTAL
+
+**Source:** Office of Economic Adviser, DPIIT
+
+**Purpose:**
+Candidate cost/price-side external context.
+
+Potential variables include:
+
+- WPI
+- Output PPI
+- Input PPI
+- sector/category price indices
+
+**Example research use:**
+
+A relevant price index could potentially provide cost-side context for businesses exposed to that sector.
+
+**Important limitation:**
+
+The index does not observe the individual MSME's actual costs.
+
+**Official source:**
+
+https://eaindustry.nic.in/download_data_2223.asp
+
+---
+
+# S04 — OEA WPI/PPI FAQ
+
+**Role:** GOVERNANCE / DATA QUALITY
+
+**Purpose:**
+Documents methodology and changes associated with the WPI series.
+
+Useful for understanding:
+
+- coverage
+- weights
+- methodology
+- missing values
+- series changes
+
+**Official source:**
+
+https://eaindustry.nic.in/uploaded_files/wpi/FAQS.pdf
+
+---
+
+# S05 — OEA WPI Release Archive
+
+**Role:** CONTEXT / DATA PROVENANCE
+
+**Purpose:**
+Historical release and publication reference for WPI data.
+
+**Official source:**
+
+https://eaindustry.nic.in/wpi_press_release_archive.asp
+
+---
+
+# S06 — MoSPI Consumer Price Index
+
+**Role:** EXPERIMENTAL
+
+**Source:** Ministry of Statistics and Programme Implementation
+
+**Potential use:**
+
+Candidate demand-side/context signal where sector and geography mapping is defensible.
+
+Potential dimensions include:
+
+- rural/urban
+- state/UT
+- product/group categories
+- monthly observations
+
+**Important limitation:**
+
+CPI does not represent the demand or sales of an individual business.
+
+**Official source:**
+
+https://esankhyiki.mospi.gov.in/catalogue-main/catalogue?product=CPI
+
+---
+
+# S07 — Udyam Registration Data
+
+**Role:** INDIAN CONTEXT
+
+**Source:** Open Government Data Platform
+
+**Purpose:**
+Provides district-level MSME registration context.
+
+**Can tell us:**
+
+- registration distribution
+- district-level MSME context
+
+**Cannot tell us:**
+
+- individual business daily sales
+- individual business cash flow
+- individual business forecasting performance
+
+**Official source:**
+
+https://www.data.gov.in/resource/list-msme-registered-units-under-udyam
+
+---
+
+# S08 — ASUSE
+
+**Role:** INDIAN CONTEXT
+
+**Source:** MoSPI — Annual Survey of Unincorporated Sector Enterprises
+
+**Purpose:**
+Provides Indian business-sector context for unincorporated establishments.
+
+Potential information includes:
+
+- establishments
+- employment
+- receipts
+- expenses
+- assets
+- loans
+- inventories
+- ICT usage
+
+**Important limitation:**
+
+ASUSE is not a substitute for individual business-level daily forecasting data.
+
+**Official source:**
+
+https://esankhyiki.mospi.gov.in/catalogue-main/catalogue?page=1&product=ASUSE&rowsPerPage=10
+
+---
+
+# S09 — RBI Database on Indian Economy
+
+**Role:** CONTEXT
+
+**Source:** Reserve Bank of India
+
+**Potential use:**
+
+Broader financial and payment ecosystem indicators.
+
+**Important limitation:**
+
+Aggregate ecosystem indicators do not represent an individual MSME's payment history.
+
+**Official source:**
+
+https://dbieold.rbi.org.in/DBIE/
+
+---
+
+# S10 — ONDC Open Data
+
+**Role:** EXPERIMENTAL
+
+**Source:** Open Network for Digital Commerce
+
+**Potential use:**
+
+Aggregate ecosystem-level indicators such as:
+
+- orders
+- sellers
+- geography
+- network trends
+
+**Important limitation:**
+
+This is ecosystem-level information, not individual MSME sales ground truth.
+
+**Official source:**
+
+https://opendata.ondc.org/retail
+
+---
+
+# S11 — GST GSTR-1
+
+**Role:** POTENTIAL CORE BUSINESS INPUT
+
+**Source:** GST official documentation
+
+GSTR-1 contains outward-supply information, including relevant invoice and credit/debit-note information.
+
+**Potential use:**
+
+Where legitimately available and consented, GST data may contribute evidence about business sales/invoicing.
+
+**Critical limitation:**
+
+GST invoice information is not equivalent to cash received.
+
+Therefore:
+
+> GST ≠ cash flow
+
+Invoices, receivables and collections must remain separate in the data model.
+
+**Official source:**
+
+https://tutorial.gst.gov.in/userguide/returns/Creation_of_Outward_Supplies_Return_in_GSTR-1.htm
+
+---
+
+# S12 — RBI Account Aggregator Framework
+
+**Role:** GOVERNANCE
+
+**Purpose:**
+
+Provides the regulatory framework relevant to consent-based financial information sharing.
+
+Important concepts include:
+
+- consent
+- revocation
+- auditability
+- secure transmission
+- customer credential protection
+
+**Official source:**
+
+https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=10690
+
+---
+
+# S13 — UCI Online Retail Dataset
+
+**Role:** BENCHMARK
+
+**Source:** UCI Machine Learning Repository
+
+**Dataset characteristics:**
+
+- 541,909 transactions
+- UK online retailer
+- December 2010–December 2011
+
+**Purpose:**
+
+Methodology and pipeline testing.
+
+**Important limitation:**
+
+It cannot establish Indian MSME generalization.
+
+**Official source:**
+
+https://archive.ics.uci.edu/dataset/352/online%2Bretail
+
+---
+
+# S14 — TallyPrime Cash Flow Projection
+
+**Role:** EXISTING LANDSCAPE
+
+**Purpose:**
+
+Documents existing accounting-software capabilities relevant to forecasting and scenarios.
+
+**Research relevance:**
+
+Demonstrates that forecasting itself is not claimed as novel.
+
+**Official source:**
+
+https://help.tallysolutions.com/cash-flow-and-projection-report-tally/
+
+---
+
+# S15 — Zoho Books Cash Flow Forecasting
+
+**Role:** EXISTING LANDSCAPE
+
+**Purpose:**
+
+Documents existing cash-flow forecasting functionality.
+
+**Research relevance:**
+
+Supports the decision to frame the research around incremental external information value rather than simply "AI forecasting."
+
+**Official source:**
+
+https://www.zoho.com/in/books/help/reports/business-overview.html
+
+---
+
+# S16 — DPDP Rules
+
+**Role:** GOVERNANCE
+
+**Source:** Ministry of Electronics and Information Technology
+
+**Purpose:**
+
+Relevant privacy and data-governance reference for future stages.
+
+**Important note:**
+
+Applicability and commencement must be assessed according to the applicable rules and dates at implementation time.
+
+**Official source:**
+
+https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf
+
+---
+
+# S17 — CERT-In Directions
+
+**Role:** GOVERNANCE
+
+**Purpose:**
+
+Security and incident-reporting reference relevant to applicable entities.
+
+**Important limitation:**
+
+Requirements should not be assumed to apply identically to every organization.
+
+**Official source:**
+
+https://www.cert-in.org.in/Directions70B.jsp
+
+---
+
+# Source Admission Test
+
+A source is considered for model use only if it passes the following sequence:
+
+1. Credible
+2. Relevant
+3. Available before prediction time
+4. Correct sector/geography
+5. Compatible temporal frequency
+6. Sufficient history
+7. No information leakage
+8. Demonstrable out-of-sample value
+
+If a source fails these checks, it can be:
+
+- retained as context,
+- restricted to analysis,
+- excluded from the model,
+- or documented as a negative result.
+
+---
+
+# Evidence Hierarchy
+
+### A — Direct business evidence
+
+Closest to the actual prediction target.
+
+Examples:
+- sales
+- invoices
+- payments
+- expenses
+- inventory
+
+### B — Closely related business evidence
+
+Examples:
+- financial/payment behaviour
+
+### C — Sector/context evidence
+
+Examples:
+- WPI/PPI
+- CPI
+- ASUSE
+- ecosystem indicators
+
+### D — Benchmark evidence
+
+Examples:
+- UCI Online Retail
+
+A benchmark result must not be presented as evidence of Indian MSME performance.
