@@ -1,0 +1,27 @@
+msmedi.db
+.pytest_cache/
+Online_Retail.xlsx
+*.xlsx
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables and secrets
+.env
+.env.*
+.streamlit/secrets.toml
+
+# System files
+.DS_Store
+Thumbs.db

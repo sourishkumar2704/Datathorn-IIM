@@ -1,0 +1,6 @@
+numpy
+pandas
+scikit-learn
+openpyxl
+streamlit>=1.50.0
+pytest
